@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+<script src="/assets/jquery.js"></script>
+<style>
+</style>
+</head>
+<body>
+<div class="prompt"></div>
+<script>
+//array that holds instructions
+//instructions to be typed in input fields
+var prompts = [
+  'Type your name',
+  'Type an adjective',
+  'Type a noun'
+];
+
+//alert(prompts.length);//expected output 3
+//alert(prompts[0]);//expected out put 'Type your name'
+//function, using jquery will display itenat 2nd index of arrayput the first item of array
+$('.prompt').html(prompts[2]);
+</script>
+</body>  
