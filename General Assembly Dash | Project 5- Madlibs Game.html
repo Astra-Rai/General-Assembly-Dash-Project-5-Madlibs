@@ -7,18 +7,34 @@
 </head>
 <body>
 <div class="prompt"></div>
+<button>Next</button>
+
 <script>
-//array that holds instructions
-//instructions to be typed in input fields
-var prompts = [
-  'Type your name',
-  'Type an adjective',
-  'Type a noun'
+
+var prompts= [
+	'type your name',
+	'type an adjective',
+	'type a noun'
 ];
 
-//alert(prompts.length);//expected output 3
-//alert(prompts[0]);//expected out put 'Type your name'
-//function, using jquery will display itenat 2nd index of arrayput the first item of array
-$('.prompt').html(prompts[2]);
+var currentPrompt = 0;
+
+//A function that will call the next prompt
+var nextPrompt = function(){
+
+// put first prompt in all html elements with class prompt
+$('.prompt').html(prompts[currentPrompt]);
+
+//move the next prompt into variable currentPrompt
+currentPrompt = currentPrompt + 1;
+
+}
+
+
+$('button').click(function() {
+
+  nextPrompt();
+
+});
+
 </script>
-</body>  
